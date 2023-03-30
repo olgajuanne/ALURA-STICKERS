@@ -39,7 +39,7 @@ public class GeradorDeFigurinhas {
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        String texto = "Top";
+        String texto = "Stickers";
         FontMetrics fontMetrics = graphics.getFontMetrics();
         Rectangle2D retangulo = fontMetrics.getStringBounds(texto, graphics);
         int larguraTexto = (int)retangulo.getWidth();

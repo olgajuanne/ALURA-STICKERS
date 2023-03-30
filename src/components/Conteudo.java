@@ -1,0 +1,21 @@
+package components;
+
+public class Conteudo {
+
+    private String titulo;
+    private String urlImagem;
+
+    public Conteudo(String titulo, String urlImagem) {
+      this.titulo = titulo;
+      this.urlImagem = urlImagem;
+    }
+
+    public String getTitulo() {
+      return titulo;
+    }
+
+    public String geturlImagem() {
+      return urlImagem;
+    }
+  
+}

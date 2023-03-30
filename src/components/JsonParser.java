@@ -21,7 +21,6 @@ public class JsonParser {
         String[] items = matcher.group(1).split("\\},\\{");
 
         List<Map<String, String>> dados = new ArrayList<>();
-
         
         for (String item : items) {
 
