@@ -31,7 +31,7 @@ public class App {
     List<Map<String, String>> listaDeFilmes = parser.parse(body);
 
     // cria pasta 
-    var diretorio = new File("../figurinhas");
+    var diretorio = new File("ALURA-STICKERS/figurinhas/");
       diretorio.mkdir();
 
     // exibir e manipular os dados 
@@ -42,7 +42,7 @@ public class App {
         String titulo = filme.get("title");
 
         InputStream inputStream = new URL(urlImagem).openStream();
-        String nomeArquivo = titulo + ".png";
+        String nomeArquivo = "ALURA-STICKERS/figurinhas/" + titulo + ".png";
 
         geradora.cria(inputStream, nomeArquivo);
 
