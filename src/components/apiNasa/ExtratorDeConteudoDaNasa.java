@@ -8,7 +8,7 @@ import components.Conteudo;
 import components.ExtratorDeConteudo;
 import components.JsonParser;
 
-public class ExtratorDeConteudoDaNasa implements ExtratorDeConteudo {
+public class ExtratorDeConteudoDaNasa implements ExtratorDeConteudo{
 
     public List<Conteudo> extraiConteudos( String json) {
 

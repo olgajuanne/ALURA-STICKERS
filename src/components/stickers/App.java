@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
+import components.API;
 import components.ClienteHttp;
 import components.JsonParser;
 
@@ -16,8 +17,9 @@ public class App {
 
     // fazer uma conexão HTTP e buscar os top 250 filmes
     //String url = "https://imdb-api.com/en/API/Top250Movies/k_0ojt0yvm";
-    String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies.json";
+    API api = API.IMDB_TOP_MOVIES;
     
+    String url = api.getUrl();
     var http = new ClienteHttp();
     String json = http.buscaDados(url);
 

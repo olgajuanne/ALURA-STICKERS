@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
+import components.API;
 import components.ClienteHttp;
 import components.Conteudo;
 import components.stickers.GeradorDeFigurinhas;
@@ -13,8 +14,11 @@ public class App {
   
     public static void main(String[] args) throws Exception {
 
+        API api = API.NASA;
+
       // fazer uma conexão HTTP
-      String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/NASA-APOD.json";
+      String url = api.getUrl();
+      ExtratorDeConteudoDaNasa extrator = (ExtratorDeConteudoDaNasa) api.getExtrator();
       
       var http = new ClienteHttp();
       String json = http.buscaDados(url);
@@ -24,7 +28,7 @@ public class App {
           diretorio.mkdir();
 
       // exibir e manipular os dados 
-      ExtratorDeConteudoDaNasa extrator = new ExtratorDeConteudoDaNasa();
+
       List<Conteudo> conteudos = extrator.extraiConteudos(json);
 
       var geradora = new GeradorDeFigurinhas();
