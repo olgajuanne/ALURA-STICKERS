@@ -8,6 +8,7 @@ import java.util.Map;
 
 import components.JsonParser;
 
+
 public class App {
     public static void main(String[] args) throws Exception {
         // fazer uma conexão HTTP e buscar os top 250 filmes

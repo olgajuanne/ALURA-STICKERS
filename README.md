@@ -8,7 +8,8 @@ Serão 5 aulas de programação, gratuitas, para desenvolver do zero uma aplica�
 
 ## Funcionalidades do projeto
 
-Está API seleciona a documentação do IMDB.
+- Aula 01 - Consumir uma API de filmes com Java 
+- Aula 02 - Gerando figurinhas para WhatsApp
 
 ## Tecnologias utilizadas
 - `Java 17`
