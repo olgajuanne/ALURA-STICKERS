@@ -14,17 +14,17 @@ public class App {
   
     public static void main(String[] args) throws Exception {
 
-        API api = API.NASA;
+        API api = API.LINGUAGEM;
 
       // fazer uma conexão HTTP
       String url = api.getUrl();
-      ExtratorDeConteudoDaNasa extrator = (ExtratorDeConteudoDaNasa) api.getExtrator();
+      ExtratorDeConteudoLinguagem extrator = (ExtratorDeConteudoLinguagem) api.getExtrator();
       
       var http = new ClienteHttp();
       String json = http.buscaDados(url);
 
       // cria pasta 
-      var diretorio = new File("ALURA-STICKERS/figurinhas/Nasa");
+      var diretorio = new File("figurinhas/");
           diretorio.mkdir();
 
       // exibir e manipular os dados 
@@ -37,7 +37,7 @@ public class App {
           Conteudo conteudo = conteudos.get(i);
 
           InputStream inputStream = new URL(conteudo.geturlImagem()).openStream();
-          String nomeArquivo = "ALURA-STICKERS/figurinhas/Nasa/" + conteudo.getTitulo() + ".png";
+          String nomeArquivo = "figurinhas/" + conteudo.getTitulo() + ".png";
 
           geradora.cria(inputStream, nomeArquivo);
 
