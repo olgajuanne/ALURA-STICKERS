@@ -1,3 +1,5 @@
+package components.apiFilmes;
+
 
 import java.util.List;
 import java.util.Map;
@@ -10,7 +12,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         // fazer uma conexão HTTP e buscar os top 250 filmes
         // String url = "https://imdb-api.com/en/API/Top250Movies/k_0ojt0yvm";
-        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopTVs.json";
+        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/MostPopularMovies.json";
         
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
@@ -27,8 +29,12 @@ public class App {
              System.out.println(filme.get("image"));
              System.out.print("\u001b[37m\u001b[46m Classificação:\u001b[m ");
              System.out.println(filme.get("imDbRating"));
-             System.out.println("⭐⭐⭐⭐⭐⭐⭐⭐");
-             System.out.println();
+             double classificacao = Double.parseDouble(filme.get("imDbRating"));
+             int numeroEstrela = (int) classificacao;
+             for (int i = 1; i <= numeroEstrela; i++) {
+                System.out.print("⭐");
+             }  
+             System.out.println("\n");
         }
     }
 }

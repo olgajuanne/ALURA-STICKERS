@@ -1,17 +1,18 @@
 ## Imersão Java
 
 Este repositório conterá o código das aulas da Imersão Java da Alura.
-Serão 5 aulas de programação, gratuitas, para desenvolver do zero uma aplicação em Java, 
+Foram 5 aulas de programação, gratuitas, desenvolvendo do zero uma aplicação em Java. 
 
 ## Status do Projeto
-🚧 Projeto em construção 🚧
+Concluído
 
 ## Funcionalidades do projeto
 
 - Aula 01 - Consumir uma API de filmes com Java 
 - Aula 02 - Gerando figurinhas para WhatsApp
 - Aula 03 - Ligando as pontas, refatoração e orientação a objetos
-- Aula 04 - Criando nossa própria API com Spring
+- [Aula 04](https://github.com/olgajuanne/linguagens-api) - Criando nossa própria API com Spring
+- Aula 05 - Publicando nossa API no Cloud
 
 ## Tecnologias utilizadas
 - `Java 17`
